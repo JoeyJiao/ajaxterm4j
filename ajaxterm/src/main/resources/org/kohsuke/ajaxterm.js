@@ -130,11 +130,11 @@ ajaxterm.Terminal=function(id,options) {
 						window.clearTimeout(error_timeout);
 						if(r.responseText.trim()!="<idem/>") {
                             dterm.innerHTML = r.responseText;
-							rmax=100;
+							rmax=3000;
 						} else {
 							rmax*=2;
-							if(rmax>2000)
-								rmax=2000;
+							if(rmax>5000)
+								rmax=5000;
 						}
 
                         // update cursor position
